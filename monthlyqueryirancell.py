@@ -75,4 +75,4 @@ while start_date <= end_date:
 appended_data = appended_data.reset_index()
 print(appended_data)
 
-# appended_data.to_csv('monthlyqueryirancell.csv')
+appended_data.to_csv('monthlyqueryirancell.csv')
