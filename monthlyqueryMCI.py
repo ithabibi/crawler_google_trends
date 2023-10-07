@@ -21,7 +21,7 @@ kw_list = ['همراه اول', 'ایرانسل']
 
 ########### while ##############
 start_date = datetime.date(2020, 1, 1)
-end_date = datetime.date(2023, 3, 1)
+end_date = datetime.date(2020, 3, 1)
 delta = datetime.timedelta(days=1)
 
 while start_date <= end_date:
