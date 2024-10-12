@@ -28,9 +28,9 @@ kw_list = ['همراه من', 'ایرانسل من']
 # create payload
 # trend.build_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='')
 trend.build_payload(
-    kw_list, cat=0, timeframe='2010-01-01 2023-04-03', geo='', gprop='')
+    kw_list, cat=0, timeframe='2010-01-01 2024-04-03', geo='', gprop='')
 
-print("kw_list, cat=0, timeframe='2006-01-01 2023-03-03', geo='', gprop=''")
+print("kw_list, cat=0, timeframe='2006-01-01 2024-03-03', geo='', gprop=''")
 
 # create a dataframe of google trends
 data = trend.interest_over_time()
