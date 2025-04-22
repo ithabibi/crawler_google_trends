@@ -1,0 +1,69 @@
+options = ChromeOptions()
+
+### Performance and resource optimization
+options.add_argument('--disable-gpu')
+options.add_argument('--disable-software-rasterizer')
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-background-networking')
+options.add_argument('--disable-cache')
+options.add_argument('--disable-webgl')
+options.add_argument('--disable-renderer-backgrounding')
+options.add_argument('--disable-backgrounding-occluded-windows')
+options.add_argument('--disable-extensions')
+
+### Security and anti-bot measures
+options.add_argument('--disable-blink-features=AutomationControlled')
+options.add_argument('--ignore-certificate-errors')
+options.add_argument('--ignore-ssl-errors')
+options.add_argument('--disable-webrtc')
+options.add_argument('--disable-webrtc-ip-handling')
+options.add_argument('--disable-permissions-api')
+options.add_argument('--allow-insecure-localhost')
+options.add_argument('--disable-site-isolation-trials')
+options.add_argument('--disable-blink-features=AutomationControlled')
+
+### Privacy and annoyance reduction
+options.add_argument('--incognito')
+options.add_argument('--no-default-browser-check')
+options.add_argument('--no-first-run')
+options.add_argument('--disable-notifications')
+options.add_argument('--disable-translate')
+options.add_argument('--mute-audio')
+options.add_argument('--hide-scrollbars')
+options.add_argument('--blink-settings=imagesEnabled=false')
+
+### Test automation optimizations and debugging
+options.add_argument('--disable-popup-blocking')
+options.add_argument('--disable-print-preview')
+options.add_argument('--disable-pdf-viewer')
+options.add_argument('--disable-url-fetcher')
+options.add_argument('--disable-navigation-preload')
+options.add_argument('--disable-browser-side-navigation')
+options.add_argument('--disable-logging')
+options.add_argument('--disable-devtools-autosave')
+options.add_argument('--disable-experimental-accessibility')
+options.add_argument('--disable-prompt-on-repost')
+options.add_argument('--disable-password-generation')
+
+### Advanced and custom configurations
+options.add_argument('--lang=fa-IR')
+options.add_argument('--timezone=Iran/Tehran')
+options.add_argument('--disable-google-api-key')
+options.add_argument('--disable-blink-features=NavigationTimingAPI')
+options.add_argument('--no-zygote')
+options.add_argument('--disable-file-system')
+options.add_experimental_option('excludeSwitches', ['enable-automation'])
+options.add_experimental_option('useAutomationExtension', False)
+
+driver = webdriver.Chrome(options=options)
+driver.implicitly_wait(10)
+driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined});")
+driver.get('https://trends.google.com')
+driver.get('https://trends.google.com/trends/explore')
+
+
+ادامه کد شما
+
+
+فقط به این شکل پیش برید و هیچ تغییر دیگه‌ای بر روی اینستنس مرورگر باز شده (مثل: تغییر سایز صفحه و ...) انجم ندید
